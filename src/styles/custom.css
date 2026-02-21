@@ -1,7 +1,19 @@
-/* Stouffer Labs custom styles */
+/* Custom theme */
 
 :root {
-  --sl-color-accent-low: #1a1f36;
-  --sl-color-accent: #4f6df5;
-  --sl-color-accent-high: #b4c1ff;
+  --sl-color-accent-low: #1a2332;
+  --sl-color-accent: #5b9cf5;
+  --sl-color-accent-high: #c4dafc;
+}
+
+/* Tighten up the splash page hero — less dead space */
+[data-page-type="splash"] .hero {
+  padding-block: 3rem;
+}
+
+/* Remove the giant title on splash — the nav already says who you are */
+[data-page-type="splash"] .hero h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--sl-color-gray-2);
 }
