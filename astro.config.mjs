@@ -7,7 +7,7 @@ export default defineConfig({
 	site: 'https://stouffer-labs.github.io',
 	integrations: [
 		starlight({
-			title: 'Stouffer Labs',
+			title: 'Eric Stouffer',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/stouffer-labs' }],
 			sidebar: [
 				{
