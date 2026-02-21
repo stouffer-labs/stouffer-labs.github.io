@@ -3,7 +3,7 @@ title: Projects
 description: Personal projects in AI, knowledge systems, and developer tools.
 template: splash
 hero:
-  tagline: Personal projects in AI, knowledge systems, and dev tools. Everything's open source.
+  tagline: A space to keep my personal projects organized. Mostly AI tools, knowledge systems, and developer workflows. Everything's open source.
   actions:
     - text: View Projects
       link: "#projects"
@@ -17,7 +17,9 @@ hero:
 import { CardGrid } from '@astrojs/starlight/components';
 import ProjectCard from '../../components/ProjectCard.astro';
 
+<div id="projects">
 ## Projects
+</div>
 
 <CardGrid>
   <ProjectCard
@@ -28,3 +30,17 @@ import ProjectCard from '../../components/ProjectCard.astro';
     docs="/projects/cypress/"
   />
 </CardGrid>
+
+---
+
+## About
+
+<div class="about-section">
+  <div class="about-content">
+
+  I'm Eric — a software engineer interested in AI/ML, systems engineering, and building tools that make complex workflows simpler. This is where I publish the things I build outside of work.
+
+  If you want to chat, find me on [LinkedIn](https://www.linkedin.com/in/eric-stouffer/) or [GitHub](https://github.com/stouffer-labs).
+
+  </div>
+</div>
