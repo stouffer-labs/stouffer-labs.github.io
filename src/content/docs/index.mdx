@@ -1,0 +1,48 @@
+---
+title: Stouffer Labs
+description: Open-source tools for AI, knowledge systems, and developer workflows.
+template: splash
+hero:
+  tagline: Open-source tools for AI, knowledge systems, and developer workflows.
+  actions:
+    - text: Browse Projects
+      link: /projects/cypress/
+      icon: right-arrow
+    - text: GitHub
+      link: https://github.com/stouffer-labs
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+## Projects
+
+<CardGrid>
+  <ProjectCard
+    name="Cypress"
+    description="Intelligent document processing pipeline with multi-model orchestration."
+    language="Python"
+    repo="https://github.com/stouffer-labs/cypress"
+    docs="/projects/cypress/"
+  />
+</CardGrid>
+
+---
+
+## About
+
+Stouffer Labs builds practical software that solves real problems. Every project here is open source, well-documented, and built to production standards.
+
+<CardGrid>
+  <Card title="Open Source" icon="github">
+    All projects are Apache 2.0 licensed and open to contributions.
+  </Card>
+  <Card title="Multi-Language" icon="setting">
+    Projects span Python, Rust, and TypeScript — using the right tool for the job.
+  </Card>
+  <Card title="Production Quality" icon="approve-check-circle">
+    CI/CD, documentation, and testing are first-class concerns, not afterthoughts.
+  </Card>
+</CardGrid>
