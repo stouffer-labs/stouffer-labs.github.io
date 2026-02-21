@@ -6,27 +6,37 @@
   --sl-color-accent-high: #c4dafc;
 }
 
+/* Hide the site title in nav — search becomes the leftmost element */
+header .site-title {
+  display: none !important;
+}
+
 /* Shrink the hero — less dead space */
 [data-page-type="splash"] .hero {
   padding-block: 2.5rem;
 }
 
-/* De-emphasize the page title in the hero */
+/* Hide the "Projects" h1 in the hero — the cards speak for themselves */
 [data-page-type="splash"] .hero h1 {
   display: none;
 }
 
-/* About section: photo + text side by side */
+/* About section: photo + text side by side, vertically centered */
 .about-section {
   display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-  max-width: 40rem;
+  gap: 2rem;
+  align-items: center;
+  max-width: 44rem;
+}
+
+.about-photo {
+  flex-shrink: 0;
 }
 
 .about-photo img {
   border-radius: 50%;
   object-fit: cover;
+  display: block;
 }
 
 .about-content {
