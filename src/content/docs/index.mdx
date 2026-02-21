@@ -16,6 +16,8 @@ hero:
 
 import { CardGrid } from '@astrojs/starlight/components';
 import ProjectCard from '../../components/ProjectCard.astro';
+import { Image } from 'astro:assets';
+import profilePic from '../../assets/profile.png';
 
 <div id="projects">
 ## Projects
@@ -33,14 +35,17 @@ import ProjectCard from '../../components/ProjectCard.astro';
 
 ---
 
-## About
-
 <div class="about-section">
+  <div class="about-photo">
+    <Image src={profilePic} alt="Eric Stouffer" width={140} />
+  </div>
   <div class="about-content">
 
-  I'm Eric — a software engineer interested in AI/ML, systems engineering, and building tools that make complex workflows simpler. This is where I publish the things I build outside of work.
+  **Eric Stouffer** — Solutions architect by day, tinkerer by night. I spend most of my time at the intersection of AI/ML and systems engineering. UC Davis alum, based in the Bay Area.
 
-  If you want to chat, find me on [LinkedIn](https://www.linkedin.com/in/eric-stouffer/) or [GitHub](https://github.com/stouffer-labs).
+  This is where I publish the things I build outside of work.
+
+  [LinkedIn](https://www.linkedin.com/in/eric-stouffer/) · [GitHub](https://github.com/stouffer-labs)
 
   </div>
 </div>
