@@ -5,9 +5,6 @@ template: splash
 hero:
   tagline: A space to keep my personal projects organized. Mostly AI tools, knowledge systems, and developer workflows. Everything's open source.
   actions:
-    - text: View Projects
-      link: "#projects"
-      icon: down-caret
     - text: GitHub
       link: https://github.com/stouffer-labs
       icon: external
@@ -18,10 +15,6 @@ import { CardGrid } from '@astrojs/starlight/components';
 import ProjectCard from '../../components/ProjectCard.astro';
 import { Image } from 'astro:assets';
 import profilePic from '../../assets/profile.png';
-
-<div id="projects">
-## Projects
-</div>
 
 <CardGrid>
   <ProjectCard
@@ -37,7 +30,7 @@ import profilePic from '../../assets/profile.png';
 
 <div class="about-section">
   <div class="about-photo">
-    <Image src={profilePic} alt="Eric Stouffer" width={140} />
+    <Image src={profilePic} alt="Eric Stouffer" width={180} />
   </div>
   <div class="about-content">
 
