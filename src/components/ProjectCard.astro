@@ -1,0 +1,92 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  language: string;
+  repo: string;
+  docs: string;
+}
+
+const { name, description, language, repo, docs } = Astro.props;
+
+const languageColors: Record<string, string> = {
+  Python: '#3572A5',
+  Rust: '#DEA584',
+  TypeScript: '#3178C6',
+};
+
+const color = languageColors[language] || '#888';
+---
+
+<div class="project-card">
+  <div class="project-header">
+    <h3><a href={docs}>{name}</a></h3>
+    <span class="language-badge" style={`--badge-color: ${color}`}>{language}</span>
+  </div>
+  <p>{description}</p>
+  <div class="project-links">
+    <a href={docs}>Documentation</a>
+    <a href={repo}>GitHub</a>
+  </div>
+</div>
+
+<style>
+  .project-card {
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    background: var(--sl-color-black);
+  }
+
+  .project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-header h3 {
+    margin: 0;
+    font-size: 1.15rem;
+  }
+
+  .project-header a {
+    text-decoration: none;
+    color: var(--sl-color-white);
+  }
+
+  .project-header a:hover {
+    color: var(--sl-color-text-accent);
+  }
+
+  .language-badge {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 1rem;
+    background: var(--badge-color);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--sl-color-gray-2);
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .project-links a {
+    color: var(--sl-color-text-accent);
+    text-decoration: none;
+  }
+
+  .project-links a:hover {
+    text-decoration: underline;
+  }
+</style>
