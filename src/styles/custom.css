@@ -1,0 +1,7 @@
+/* Stouffer Labs custom styles */
+
+:root {
+  --sl-color-accent-low: #1a1f36;
+  --sl-color-accent: #4f6df5;
+  --sl-color-accent-high: #b4c1ff;
+}
