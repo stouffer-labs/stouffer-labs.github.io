@@ -6,14 +6,27 @@
   --sl-color-accent-high: #c4dafc;
 }
 
-/* Tighten up the splash page hero — less dead space */
+/* Shrink the hero — less dead space */
 [data-page-type="splash"] .hero {
-  padding-block: 3rem;
+  padding-block: 2.5rem;
 }
 
-/* Remove the giant title on splash — the nav already says who you are */
+/* De-emphasize the page title in the hero (it just says "Projects") */
 [data-page-type="splash"] .hero h1 {
-  font-size: 1.5rem;
-  font-weight: 400;
+  display: none;
+}
+
+/* About section styling */
+.about-section {
+  max-width: 40rem;
+}
+
+.about-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: var(--sl-color-gray-2);
+}
+
+.about-content a {
+  color: var(--sl-color-text-accent);
 }
