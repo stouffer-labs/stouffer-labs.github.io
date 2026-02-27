@@ -28,16 +28,40 @@ const sameTarget = docHref === repo;
   <p>{description}</p>
   <div class="project-links">
     {!sameTarget && <a href={docHref}>Documentation</a>}
-    <a href={repo}>GitHub</a>
+    <a href={repo}>GitHub &rarr;</a>
   </div>
 </div>
 
 <style>
   .project-card {
     border: 1px solid var(--sl-color-gray-5);
-    border-radius: 0.5rem;
-    padding: 1.25rem;
+    border-radius: 8px;
+    padding: 1.5rem;
     background: var(--sl-color-black);
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--badge-color, var(--sl-color-accent));
+    border-radius: 8px 0 0 8px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .project-card:hover {
+    border-color: var(--sl-color-gray-4);
+    background: var(--sl-color-gray-6);
+  }
+
+  .project-card:hover::before {
+    opacity: 1;
   }
 
   .project-header {
@@ -49,12 +73,15 @@ const sameTarget = docHref === repo;
 
   .project-header h3 {
     margin: 0;
-    font-size: 1.15rem;
+    font-size: 1rem;
+    font-family: var(--sl-font-mono);
+    font-weight: 600;
   }
 
   .project-header a {
     text-decoration: none;
     color: var(--sl-color-white);
+    transition: color 0.2s;
   }
 
   .project-header a:hover {
@@ -62,30 +89,36 @@ const sameTarget = docHref === repo;
   }
 
   .language-badge {
-    font-size: 0.75rem;
-    padding: 0.15rem 0.5rem;
-    border-radius: 1rem;
-    background: var(--badge-color);
-    color: #fff;
+    font-size: 0.65rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--badge-color);
     font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1px solid var(--badge-color);
+    font-family: var(--sl-font-mono);
   }
 
   p {
     color: var(--sl-color-gray-2);
-    margin: 0.5rem 0;
-    font-size: 0.95rem;
+    margin: 0.25rem 0 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 
   .project-links {
     display: flex;
     gap: 1rem;
     margin-top: 0.75rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    font-family: var(--sl-font-mono);
   }
 
   .project-links a {
     color: var(--sl-color-text-accent);
     text-decoration: none;
+    font-weight: 500;
   }
 
   .project-links a:hover {
