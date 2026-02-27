@@ -12,12 +12,7 @@ export default defineConfig({
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/stouffer-labs' },
 				{ icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/eric-stouffer/' },
 			],
-			sidebar: [
-				{
-					label: 'Projects',
-					autogenerate: { directory: 'projects' },
-				},
-			],
+			sidebar: [],
 			customCss: ['./src/styles/custom.css'],
 		}),
 	],

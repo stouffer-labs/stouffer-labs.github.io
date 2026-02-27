@@ -5,9 +5,10 @@ interface Props {
   language: string;
   repo: string;
   docs?: string;
+  logo?: string;
 }
 
-const { name, description, language, repo, docs } = Astro.props;
+const { name, description, language, repo, docs, logo } = Astro.props;
 
 const languageColors: Record<string, string> = {
   Python: '#3572A5',
@@ -22,7 +23,10 @@ const sameTarget = docHref === repo;
 
 <div class="project-card">
   <div class="project-header">
-    <h3><a href={docHref}>{name}</a></h3>
+    <div class="project-name">
+      {logo && <span class="project-logo" style={`-webkit-mask-image: url(${logo}); mask-image: url(${logo})`} role="img" aria-hidden="true" />}
+      <h3><a href={docHref}>{name}</a></h3>
+    </div>
     <span class="language-badge" style={`--badge-color: ${color}`}>{language}</span>
   </div>
   <p>{description}</p>
@@ -69,6 +73,26 @@ const sameTarget = docHref === repo;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0.5rem;
+  }
+
+  .project-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .project-logo {
+    display: inline-block;
+    width: 18px;
+    height: 36px;
+    background: currentColor;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    opacity: 0.85;
   }
 
   .project-header h3 {
