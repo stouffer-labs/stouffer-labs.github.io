@@ -110,11 +110,6 @@ site-search {
   display: none !important;
 }
 
-/* Hide hero actions — replaced with .github-cta in MDX */
-.hero .action {
-  display: none !important;
-}
-
 /* ── Reduce gap between hero and content ── */
 .hero + .sl-markdown-content {
   margin-top: 0;
@@ -146,33 +141,6 @@ site-search {
   font-weight: 300;
   max-width: 580px;
   margin-bottom: 1.5rem;
-}
-
-/* ── GitHub CTA button ── */
-.github-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.1rem;
-  border: 1px solid var(--sl-color-gray-5);
-  border-radius: 6px;
-  color: var(--sl-color-text);
-  text-decoration: none;
-  font-family: var(--sl-font-mono);
-  font-size: 0.8rem;
-  font-weight: 500;
-  transition: all 0.2s;
-  background: var(--sl-color-black);
-  margin-bottom: 2.5rem;
-}
-
-.github-cta:hover {
-  border-color: var(--sl-color-accent);
-  color: var(--sl-color-accent);
-}
-
-.github-cta svg {
-  flex-shrink: 0;
 }
 
 /* ── Section labels ── */
