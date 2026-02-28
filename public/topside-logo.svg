@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 128">
+  <!-- Geometric periscope — adapted from Topside menubar icon -->
+
+  <!-- Periscope vertical tube -->
+  <rect x="22" y="48" width="16" height="64" rx="2"/>
+
+  <!-- Periscope head (angled piece looking right-upward) -->
+  <path d="M22,48 L22,34 Q22,24 28,20 L46,20 Q52,20 54,28 L58,38 Q60,44 54,48 L38,48 Z"/>
+
+  <!-- Lens circle -->
+  <circle cx="54" cy="26" r="12"/>
+
+  <!-- Waterline indicator -->
+  <line x1="8" y1="72" x2="56" y2="72" stroke-width="2" opacity="0.3"/>
+
+  <style>
+    rect, path, circle { fill: #000; }
+    line { stroke: #000; }
+    @media (prefers-color-scheme: dark) {
+      rect, path, circle { fill: #fff; }
+      line { stroke: #fff; }
+    }
+  </style>
+</svg>
