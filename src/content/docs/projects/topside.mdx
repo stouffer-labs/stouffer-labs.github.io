@@ -1,0 +1,38 @@
+---
+title: Topside
+description: Voice-to-AI desktop assistant for macOS.
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+> Voice-to-AI desktop assistant for macOS.
+
+[![GitHub](https://img.shields.io/badge/GitHub-stouffer--labs%2Ftopside-blue?logo=github)](https://github.com/stouffer-labs/topside)
+
+## Overview
+
+Topside is a persistent conversational overlay that lets you talk to AI models using your voice. It sits on top of your desktop, ready to transcribe speech, send it to your AI provider, and display responses — all without switching windows.
+
+## Quick Start
+
+```bash
+npm install
+npm start
+```
+
+## Features
+
+<CardGrid>
+  <Card title="Voice Input" icon="microphone">
+    Press a hotkey to record, release to transcribe. Supports Whisper (local) and AWS Transcribe.
+  </Card>
+  <Card title="Multi-Provider AI" icon="random">
+    Amazon Bedrock, Anthropic, OpenRouter, Google, Azure, and local MLX models.
+  </Card>
+  <Card title="Always-On Overlay" icon="laptop">
+    Transparent floating window with chat history that stays on top of your desktop.
+  </Card>
+  <Card title="Screenshot Context" icon="seti:image">
+    Capture your screen and include it in the conversation for visual context.
+  </Card>
+</CardGrid>
