@@ -1,0 +1,40 @@
+---
+title: Retrivio
+description: Local-first semantic code intelligence and navigation index for project workspaces.
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+> Local-first semantic code intelligence and navigation index for project workspaces.
+
+[![GitHub](https://img.shields.io/badge/GitHub-stouffer--labs%2Fretrivio-blue?logo=github)](https://github.com/stouffer-labs/retrivio)
+
+## Overview
+
+Retrivio builds an AI-ready understanding of your local codebase using AST-aware chunking, hybrid search, and graph-based context expansion. It is designed for fast terminal workflows as well as MCP and API integrations.
+
+## Quick Start
+
+```bash
+retrivio install
+retrivio add ~/c-projects
+retrivio index
+retrivio pick --query "storage replication"
+```
+
+## Features
+
+<CardGrid>
+  <Card title="Code Intelligence" icon="seti:rust">
+    Tree-sitter powered chunking, symbol extraction, and import graph analysis across multiple languages.
+  </Card>
+  <Card title="Hybrid Retrieval" icon="search">
+    Combines lexical, semantic, and graph signals for high-precision project and file ranking.
+  </Card>
+  <Card title="Local APIs + MCP" icon="seti:json">
+    Native local API server and MCP tools for agent-driven context packaging and workflow automation.
+  </Card>
+  <Card title="Graph Context" icon="graph">
+    Project and chunk relationship graph with neighborhood and lineage exploration.
+  </Card>
+</CardGrid>
