@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 128">
+  <!-- Retrivio monogram mark (dark/light adaptive) -->
+
+  <rect x="14" y="16" width="10" height="96" rx="2" />
+  <path d="M24 16H41C50 16 56 22 56 31C56 40 50 46 41 46H24V16Z" />
+  <path d="M24 58L44 112H56L36 58H24Z" />
+  <circle cx="52" cy="20" r="4" />
+
+  <style>
+    rect, path, circle { fill: #000; }
+    @media (prefers-color-scheme: dark) {
+      rect, path, circle { fill: #fff; }
+    }
+  </style>
+</svg>
