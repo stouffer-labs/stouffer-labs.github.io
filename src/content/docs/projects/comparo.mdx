@@ -1,0 +1,41 @@
+---
+title: Comparo
+description: MCP server that orchestrates Claude Code, Codex CLI, and Gemini CLI for cross-validation.
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+> MCP server that orchestrates Claude Code, Codex CLI, and Gemini CLI for cross-validation.
+
+[![GitHub](https://img.shields.io/badge/GitHub-stouffer--labs%2FComparo-blue?logo=github)](https://github.com/stouffer-labs/Comparo)
+
+## Overview
+
+Comparo runs independent AI CLI reviewers (Claude, Codex, Gemini) as background jobs to
+cross-validate code and designs, then consolidates their findings into a single comparison.
+It exposes this as MCP tools so any MCP-capable CLI can request an independent second opinion.
+
+## Quick Start
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/stouffer-labs/Comparo/main/scripts/install.sh | bash
+comparo mcp setup
+comparo doctor
+```
+
+## Features
+
+<CardGrid>
+  <Card title="Cross-Validation" icon="approve-check">
+    Runs Claude, Codex, and Gemini as independent reviewers and consolidates their findings.
+  </Card>
+  <Card title="MCP Native" icon="seti:json">
+    Exposes comparo_deep_review and comparo_check as MCP tools for any MCP-capable CLI.
+  </Card>
+  <Card title="Background Jobs" icon="rocket">
+    Reviews run fire-and-forget; callers poll for results without blocking.
+  </Card>
+  <Card title="Cross-Platform" icon="laptop">
+    Runs on macOS, Linux, and Windows (with cmd.exe-safe Codex invocation).
+  </Card>
+</CardGrid>
