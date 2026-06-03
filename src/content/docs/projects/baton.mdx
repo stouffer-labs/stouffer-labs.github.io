@@ -1,0 +1,44 @@
+---
+title: Baton
+description: Pass the baton between machines — terminal menu to list and resume claude/codex CLI sessions natively.
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+> Pass the baton between machines — a terminal menu to list and resume your
+> claude and codex CLI sessions, grouped by project, with a live preview.
+
+[![GitHub](https://img.shields.io/badge/GitHub-stouffer--labs%2Fbaton-blue?logo=github)](https://github.com/stouffer-labs/baton)
+
+## Overview
+
+Baton scans the session transcripts that Claude Code and Codex CLI already write to disk,
+shows them in an fzf picker grouped by the directory each was started in, and resumes the
+one you pick natively (`claude --resume` / `codex resume`). No tmux, no multiplexer — so
+mouse selection, copy/paste, and scrolling stay fully native on macOS and Linux, locally
+or over SSH. Start a session on one machine, then hand it off to another wherever you are.
+
+## Quick Start
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/stouffer-labs/baton/main/scripts/install.sh | bash
+baton          # active sessions + the 10 most recent closed ones
+baton --all    # every recent session
+```
+
+## Features
+
+<CardGrid>
+  <Card title="Native Resume" icon="seti:shell">
+    Resumes sessions directly with claude --resume / codex resume — no tmux, so mouse, copy/paste, and scroll stay native.
+  </Card>
+  <Card title="Cross-Machine Handoff" icon="laptop">
+    Start a session on one host and pick it up on another over SSH; the conversation lives in a local transcript keyed by session id.
+  </Card>
+  <Card title="Grouped + Previewed" icon="list-format">
+    Sessions are grouped by their launch directory with a clean Q&A preview pane — no thinking blocks, tool calls, or narration.
+  </Card>
+  <Card title="Live Detection" icon="approve-check">
+    A ● marks sessions with a running process; resuming a live one prompts to end it first so work can't diverge across machines.
+  </Card>
+</CardGrid>
